@@ -16,26 +16,26 @@
 class Solution 
 {
     int maxi=Integer.MIN_VALUE;
-    public int func(TreeNode root)
+
+    public int func(TreeNode root) 
     {
         if(root==null)
         {
             return 0;
         }
 
-        int lt =  func(root.left); 
-        int rt = func(root.right); 
-        maxi = Math.max(maxi,(lt+rt));
-        
-        return 1+Math.max(lt,rt);
+        int lt = func(root.left);
+        int rt = func(root.right);
 
+        maxi=Math.max(maxi,(lt+rt));
+        return 1+Math.max(lt,rt);
         
     }
     public int diameterOfBinaryTree(TreeNode root) 
     {
-        
         func(root);
         return maxi;
+        
         
     }
 }
