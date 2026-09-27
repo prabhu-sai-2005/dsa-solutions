@@ -88,7 +88,7 @@ Track your progress on the Grind 75 coding interview preparation list.
 - [ ] Maximum Depth of Binary Tree
 - [ ] Same Tree
 - [ ] Invert Binary Tree
-- [x] [Binary Tree Maximum Path Sum](./C++/Hard/124. Binary Tree Maximum Path Sum/)
+- [x] [Binary Tree Maximum Path Sum](./Java/Hard/124. Binary Tree Maximum Path Sum/)
 - [ ] Binary Tree Level Order Traversal
 - [ ] Serialize and Deserialize Binary Tree
 - [ ] Subtree of Another Tree
