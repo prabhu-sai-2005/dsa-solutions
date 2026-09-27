@@ -17,6 +17,7 @@ class Solution
 {
     public boolean isSameTree(TreeNode p, TreeNode q) 
     {
+        if
         if(p.val!=q.val)
         {
             return false;
