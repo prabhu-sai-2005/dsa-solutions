@@ -57,16 +57,19 @@ class Solution
 
       func(root,mpp);
 
-      for (Map.Entry<Integer, Map<Integer, List<Integer>>> col : mpp.entrySet()) 
-      {
-        for (Map.Entry<Integer, List<Integer>> row : col.getValue().entrySet()) 
-        {
+      for (Map.Entry<Integer, Map<Integer, List<Integer>>> col : mpp.entrySet()) {
 
-         Collections.sort(row.getValue());
+    List<Integer> temp = new ArrayList<>();
 
-          fans.add(row.getValue());
-        }
-      }
+    for (Map.Entry<Integer, List<Integer>> row : col.getValue().entrySet()) {
+
+        Collections.sort(row.getValue());
+
+        temp.addAll(row.getValue());
+    }
+
+    fans.add(temp);
+}
 
       
       return fans;
