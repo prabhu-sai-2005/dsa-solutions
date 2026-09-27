@@ -28,7 +28,7 @@ class pair {
 
 class Solution 
 {
-    public void func(TreeNode root , Map<Integer, List<Integer>> mpp)
+    public void func(TreeNode root ,  Map<Integer, Map<Integer, List<Integer>>> mpp )
     {
       if(root==null) return;
 
@@ -43,7 +43,7 @@ class Solution
         int r=temp_node.x;
         int c=temp_node.y;
 
-        mpp.computeIfAbsent(c, k -> new ArrayList<>()).add(present_node.val);
+        mpp.computeIfAbsent(c,k->new TreeMap<>()).computeIfAbsent(r,k-> new ArrayList<>()).add(present_node.val);
 
         if(present_node.left!=null) q.offer(new pair(present_node.left , r+1 , c-1));
         if(present_node.right!=null) q.offer(new pair(present_node.right , r+1 , c+1));
@@ -53,16 +53,22 @@ class Solution
     public List<List<Integer>> verticalTraversal(TreeNode root) 
     {
       List<List<Integer>> fans = new ArrayList<>();
-      Map<Integer, List<Integer>> mpp = new TreeMap<>();
+      Map<Integer, Map<Integer, List<Integer>>> mpp = new TreeMap<>();
 
       func(root,mpp);
 
-      for(Map.Entry<Integer, List<Integer>> it : mpp.entrySet())
+      for (Map.Entry<Integer, Map<Integer, List<Integer>>> col : mpp.entrySet()) 
       {
-        Collections.sort(it.getValue());
-        fans.add(it.getValue());
+        for (Map.Entry<Integer, List<Integer>> row : col.getValue().entrySet()) 
+        {
+
+         Collections.sort(row.getValue());
+
+          fans.add(row.getValue());
+        }
       }
 
+      
       return fans;
         
     }
