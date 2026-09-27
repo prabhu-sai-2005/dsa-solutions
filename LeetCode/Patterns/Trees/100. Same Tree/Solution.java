@@ -15,9 +15,9 @@
  */
 class Solution 
 {
-    public boolean isSameTree(TreeNode p, TreeNode q) 
+    public boolean func(TreeNode p, TreeNode q) 
     {
-        if(p==null && q==null) return true;
+        
         if(p.val!=q.val)
         {
             return false;
@@ -46,4 +46,12 @@ class Solution
         return true;
         
     }
+    public boolean isSameTree(TreeNode p, TreeNode q)
+    {
+        if(p==null && q!=null) return false;
+        if(p!=null && q==null) return false;
+        if(p==null && q==null) return true;
+        return func(p,q);
+    }
+    
 }
