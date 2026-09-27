@@ -42,7 +42,7 @@ class Solution
          }
          else if(flag==1)
          {
-            Collections.sort(temp,Collections.reverseOrder());
+            Collections.reverse(temp);
            fans.add(temp);
            flag=0;
          }
