@@ -71,7 +71,7 @@ class Solution {
 
                 temp.addAll(values);
             }
-
+            
             fans.add(temp);
         }
 
