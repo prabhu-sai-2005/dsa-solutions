@@ -67,11 +67,11 @@ class Solution {
             for (Map.Entry<Integer, List<Integer>> left2 : left1.getValue().entrySet()) {
                 List<Integer> values = left2.getValue();
 
-                Collections.sort(values);
+                
 
                 temp.addAll(values);
             }
-
+            Collections.sort(temp);
             fans.add(temp);
         }
 
