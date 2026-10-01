@@ -13,66 +13,67 @@
  *     }
  * }
  */
-class pair {
-    TreeNode node;
-    int x;
-    int y;
+class Solution {
+    class node {
 
-    pair(TreeNode node, int x, int y) 
-    {
-        this.node = node;
-        this.x = x;
-        this.y = y;
-    }
-}
+        TreeNode n;
+        int r;
+        int c;
 
-class Solution 
-{
-    public void func(TreeNode root ,  Map<Integer, Map<Integer, List<Integer>>> mpp )
-    {
-      if(root==null) return;
+        node(TreeNode n, int r, int c) {
+            this.n = n;
+            this.r = r;
+            this.c = c;
+        }
 
-      Queue<pair> q = new ArrayDeque<>();
-      q.offer(new pair(root, 0, 0));
-
-      while(!q.isEmpty())
-      {
-        pair temp_node = q.peek();
-        q.poll();
-        TreeNode present_node = temp_node.node;
-        int r=temp_node.x;
-        int c=temp_node.y;
-
-        mpp.computeIfAbsent(c,k->new TreeMap<>()).computeIfAbsent(r,k-> new ArrayList<>()).add(present_node.val);
-
-        if(present_node.left!=null) q.offer(new pair(present_node.left , r+1 , c-1));
-        if(present_node.right!=null) q.offer(new pair(present_node.right , r+1 , c+1));
-  
-      }
-    }
-    public List<List<Integer>> verticalTraversal(TreeNode root) 
-    {
-      List<List<Integer>> fans = new ArrayList<>();
-      Map<Integer, Map<Integer, List<Integer>>> mpp = new TreeMap<>();
-
-      func(root,mpp);
-
-      for (Map.Entry<Integer, Map<Integer, List<Integer>>> col : mpp.entrySet()) {
-
-    List<Integer> temp = new ArrayList<>();
-
-    for (Map.Entry<Integer, List<Integer>> row : col.getValue().entrySet()) {
-
-        Collections.sort(row.getValue());
-
-        temp.addAll(row.getValue());
     }
 
-    fans.add(temp);
-}
+    public void func(TreeNode root, int r, int c, Map<Integer, Map<Integer, List<Integer>>> mpp) {
+        if (root == null) {
+            return;
+        }
+        Queue<node> q = new ArrayDeque<>();
+        q.offer(new node(root, r, c));
 
-      
-      return fans;
-        
+        while (!q.isEmpty()) {
+            node temp_node = q.peek();
+            q.poll();
+
+            TreeNode present_node = temp_node.n;
+            int node_val = present_node.val;
+            int node_r = temp_node.r;
+            int node_c = temp_node.c;
+
+            mpp.computeIfAbsent(node_c, lpc -> new TreeMap<>())
+   .computeIfAbsent(node_r, lpr -> new ArrayList<>())
+   .add(node_val);
+
+            if (present_node.left != null)
+                q.offer(new node(present_node.left, node_r + 1, node_c - 1));
+            if (present_node.right != null)
+                q.offer(new node(present_node.right, node_r + 1, node_c + 1));
+        }
+
+    }
+
+    public List<List<Integer>> verticalTraversal(TreeNode root) {
+        Map<Integer, Map<Integer, List<Integer>>> mpp = new TreeMap<>();
+        func(root, 0, 0, mpp);
+        List<List<Integer>> fans = new ArrayList<>();
+
+        for (Map.Entry<Integer, Map<Integer, List<Integer>>> left1 : mpp.entrySet()) {
+            List<Integer> temp = new ArrayList<>();
+
+            for (Map.Entry<Integer, List<Integer>> left2 : left1.getValue().entrySet()) {
+                temp.addAll(left2.getValue());
+            }
+
+            Collections.sort(temp);
+
+            fans.add(temp);
+        }
+
+        return fans;
+
     }
 }
