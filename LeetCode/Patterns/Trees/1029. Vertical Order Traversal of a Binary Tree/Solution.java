@@ -65,14 +65,14 @@ class Solution {
             List<Integer> temp = new ArrayList<>();
 
             for (Map.Entry<Integer, List<Integer>> left2 : left1.getValue().entrySet()) {
-                List<Integer> values = left2.getValue();
+                
 
-                Collections.sort(values);
+                
 
-                temp.addAll(values);
+                fans.add(Collections.sort(left2.getValue()););
             }
 
-            fans.add(temp);
+            
         }
 
         return fans;
