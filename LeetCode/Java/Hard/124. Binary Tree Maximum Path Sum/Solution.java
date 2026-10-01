@@ -13,22 +13,23 @@
  *     }
  * }
  */
-class Solution
+class Solution 
 {
-    int maxi = Integer.MIN_VALUE;
-
+    int maxi=Integer.MIN_VALUE;
     public int func(TreeNode root)
     {
-        if(root==null)
-        {
-            return 0;
-        }
+      if(root==null)
+      {
+        return 0;
+      }
 
-        int lt = Math.max(0,func(root.left));
-        int rt = Math.max(0,func(root.right));
+      int lt = Math.max(func(root.left),0);
+      int rt = Math.max(func(root.right),0);
 
-        maxi = Math.max(maxi,(root.val+lt+rt));
-        return root.val+(Math.max(lt,rt));
+      maxi=Math.max(maxi,(root.val+lt+rt));
+      return root.val+Math.max(lt,rt);
+
+
     }
     public int maxPathSum(TreeNode root) 
     {
