@@ -81,7 +81,7 @@ Track your progress on the NeetCode 150 roadmap practice problems.
 - [ ] Kth Smallest Element in a BST
 - [x] [Construct Binary Tree from Preorder and Inorder Traversal](./Java/Medium/105. Construct Binary Tree from Preorder and Inorder Traversal/)
 - [x] [Binary Tree Maximum Path Sum](./Java/Hard/124. Binary Tree Maximum Path Sum/)
-- [x] [Serialize and Deserialize Binary Tree](./C++/Hard/297. Serialize and Deserialize Binary Tree/)
+- [x] [Serialize and Deserialize Binary Tree](./Java/Hard/297. Serialize and Deserialize Binary Tree/)
 
 ### 📂 Tries
 - [ ] Implement Trie (Prefix Tree)

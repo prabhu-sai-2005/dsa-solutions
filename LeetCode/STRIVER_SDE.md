@@ -88,7 +88,7 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 - [ ] Validate Binary Search Tree
 - [ ] Lowest Common Ancestor of a Binary Search Tree
 - [ ] Kth Smallest Element in a BST
-- [x] [Serialize and Deserialize Binary Tree](./C++/Hard/297. Serialize and Deserialize Binary Tree/)
+- [x] [Serialize and Deserialize Binary Tree](./Java/Hard/297. Serialize and Deserialize Binary Tree/)
 
 ### 📂 Dynamic Programming & Graphs
 - [ ] Clone Graph

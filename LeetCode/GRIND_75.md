@@ -90,7 +90,7 @@ Track your progress on the Grind 75 coding interview preparation list.
 - [ ] Invert Binary Tree
 - [x] [Binary Tree Maximum Path Sum](./Java/Hard/124. Binary Tree Maximum Path Sum/)
 - [ ] Binary Tree Level Order Traversal
-- [x] [Serialize and Deserialize Binary Tree](./C++/Hard/297. Serialize and Deserialize Binary Tree/)
+- [x] [Serialize and Deserialize Binary Tree](./Java/Hard/297. Serialize and Deserialize Binary Tree/)
 - [ ] Subtree of Another Tree
 - [x] [Construct Binary Tree from Preorder and Inorder Traversal](./Java/Medium/105. Construct Binary Tree from Preorder and Inorder Traversal/)
 - [ ] Validate Binary Search Tree
