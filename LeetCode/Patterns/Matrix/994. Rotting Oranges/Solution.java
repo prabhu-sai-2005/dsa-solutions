@@ -45,7 +45,7 @@ class Solution
       int[][] vst = new int[R][C];
 
       int fans=0;
-      int sr=0;
+      int sr=-1;
       int sc=0;
 
       for(int i=0;i<R;i++)
