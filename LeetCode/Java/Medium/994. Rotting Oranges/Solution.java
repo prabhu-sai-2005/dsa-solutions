@@ -4,7 +4,7 @@ class Solution
     {
         Queue<int[]> q = new ArrayDeque<>();
         q.offer(new int[]{sr,sc});
-        //vst[sr][sc]=1;
+        vst[sr][sc]=1;
 
         while(!q.isEmpty())
         {
