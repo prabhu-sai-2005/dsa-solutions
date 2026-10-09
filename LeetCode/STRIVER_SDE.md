@@ -3,7 +3,7 @@
 Track your progress on the Striver's SDE Sheet top interview problems.
 
 ## Progress
-- **Completed:** 9 / 76 (11.8%)
+- **Completed:** 10 / 76 (13.2%)
 
 ---
 
@@ -93,7 +93,7 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 ### 📂 Dynamic Programming & Graphs
 - [ ] Clone Graph
 - [ ] Course Schedule
-- [ ] Number of Islands
+- [x] [Number of Islands](./Java/Medium/200. Number of Islands/)
 - [ ] Longest Increasing Subsequence
 - [ ] Longest Common Subsequence
 - [ ] 01 Knapsack
