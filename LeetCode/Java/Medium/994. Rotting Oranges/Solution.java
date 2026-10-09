@@ -48,7 +48,7 @@ class Solution
       int sr=-1;
       int sc=-1;
 
-      if(grid[])
+      if(grid[0][0]==0) return 0;
 
       for(int i=0;i<R;i++)
       {
