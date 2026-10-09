@@ -15,7 +15,7 @@ class Solution
             int[] temp_node = q.poll();
             int pr = temp_node[0];
             int pc = temp_node[1];
-            vst[pr][pc]=1;
+            
 
             int[] dr={-1,0,1,0};
             int[] dc={0,1,0,-1};
@@ -27,6 +27,7 @@ class Solution
 
               if(nr>=0 && nr<R && nc>=0 && nc<C && grid[nr][nc]==1 && vst[nr][nc]!=1)
               {
+                vst[nr][nc]=1;
                 q.offer(new int[]{nr,nc});
               }
             }
