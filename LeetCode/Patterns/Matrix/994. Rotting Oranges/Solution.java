@@ -46,7 +46,9 @@ class Solution
 
       int fans=0;
       int sr=-1;
-      int sc=0;
+      int sc=-1;
+
+      if()
 
       for(int i=0;i<R;i++)
       {
@@ -59,6 +61,7 @@ class Solution
           }
         }
       }
+      if(sr==-1 && sc==-1) return -1;
 
       int rans = func_dfs(grid,vst,sr,sc,R,C,fans);
 
