@@ -1,6 +1,6 @@
 # 📝 994. Rotting Oranges (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/rotting-oranges)
+🔗 [Problem Link](https://leetcode.com/problems/rotting-oranges/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
